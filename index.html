@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css"> -->
+  </head>
+   <body>
+    <h1>hello world</h1>
+    <script>
+      let x = 5;
+      let y = 6;
+      let z = x + y;
+      console.log(z);
+
+      // let a = 10;
+      // let b = 5;
+      // let c = a - b;
+      // console.log(c);
+
+      // alert();
+      // alert("THANK YOU");
+
+      // confirm();
+      // let output = confirm("side view");
+
+      // prompt();
+      // let input = prompt("exactly");
+const isMailsent= false
+
+if(isMailsent){
+  console.log("mail is sent")
+}else{
+  console.log("dont")
+}
+let Score = 39
+let grade;
+if(Score>=70){
+  grade="A"
+}else if(Score>=65){
+   grade="B"
+}
+else if(Score>=50){
+  grade="C"
+}else if(Score>=40){
+   grade="D"
+}else{
+  grade="E"
+}
+const food="peanuts"
+console.log("Grade:" + grade)
+switch(food){
+  case "oysters":
+    console.log("the taste of the sea")
+    break;
+    case "pizza":
+      console.log("a delicious pie")
+      break;
+      default:console.log("enjoy your meal")
+}
+// for(let i=0; i<5; i++){
+//   console.log(i)
+// }
+// let a = 0;
+// while(a<5){
+//   console.log(a)
+//   a++
+// }
+// let n=0
+// do{
+//   console.log(n)
+//   n++
+// }while (n<5)
+// named function
+function sum(param1,param2,param3){
+  return param1+param2+param3;
+}
+console.log(sum(3,4,8))
+// arrow funtion with argument
+const add=(number1,number2) =>{
+  return number1+number2;
+};
+console.log(add(4,10))
+// arrow function with no argument
+const printHello=()=>{
+  console.log("Hello")
+}
+printHello();
+// immediately invoke function expressions
+
+(function(){
+  console.log("hello world  my name is Ruth")
+})();
+
+(function(name){
+  console.log(`hello,${name}`)
+})("Ruth");
+
+let result= (function(){
+   return "Hello World"
+ })()
+ console.log(result)
+// // string concatination
+let hp=20
+ let computer="This computer is "+hp + " year old";
+ console.log(computer)
+
+let compute = ` this computer is ${hp} years old`
+ console.log(computer)
+// // anonymous function
+let greet=function(name){
+   console.log(`Hello ${name}`)
+ }
+greet("Ruth")
+
+// ARRAYS
+
+const fruit = ["lemon", "orange", "pear", "apple"];
+const data = [1, "chicken", false]
+// arrays method
+// index
+const myArray =[100,200,300,""]
+console.log(myArray[0])
+console.log(myArray[1])
+console.log(myArray[3])
+// length
+const numbers = [1,2,3,4,"watermelon","mango",true]
+console.log(numbers.length)
+// push
+const cart = ["apple","oranges","mango","berries","strawberry", 1, 2, 3]
+// cart.push("pear")
+console.log('avaialbe cart:',cart)
+
+// pop(with push array)
+cart.pop()
+console.log(cart)
+
+// shift(with push array)
+cart.shift()
+console.log (cart)
+
+// unsift(with push array)
+cart.unshift("guava")
+console.log(cart)
+ 
+// concat
+const number1 = [3,2,1]
+const newNumber = 4
+const like = [newNumber].concat(number1)
+console.log (like)
+
+// forEach
+number2 = [21,22,22,24,4,7]
+number2.forEach(number3 => {
+  console.log(number3)
+});
+
+// map
+  const members = ["Donald","Bliss","Don","Tayler",]
+  const announcement = members.map ((members)=>{
+    return members + " join the class"
+  })
+  console.log (announcement)
+
+
+  
+  // reduce
+const number4 = [1,2,3,4]
+const plus = number4.reduce ((accumilator, curVal)=>{
+return accumilator + curVal;
+})
+console.log(plus)
+
+
+// synchronous/asynchronous
+function helloWorld(){
+  return new Promise(resolve =>{
+    setTimeout(()=>{
+      resolve("hello world");
+    }, 2000);
+  });
+}
+const msg=async function(){
+  const msg=await helloWorld();
+  console.log("Message sent:", msg)
+}
+const msg1=async()=>{
+  const msg=await helloWorld()
+  console.log("Message api:",msg)
+}
+msg()
+msg1()
+// promises
+
+let pro1= Promise.resolve(5)
+let pro2=44;
+let pro3= new Promise(function(resolve, reject){
+    setTimeout(resolve,100,"foo");
+}, 3000)
+// resolving promises
+Promise.all([pro1, pro2, pro3]).then(
+  function(values){
+    console.log(values)
+  }
+)
+// error handling
+let json = '{"age":30}'
+try{
+  let user = JSON.parse(json);
+  console.log(user.age)
+}
+catch(error){
+console.error("invalid json data")
+}
+// js promises
+const promise = new Promise((resolve,reject)=>{
+  const res = true;
+  if(res){
+    resolve("Resolved");
+  }else{
+    reject(Error("Error"))
+  }
+});
+promise.then((res)=>console.log (res),(err)=>console.error(err))
+
+// Git
+
+
+
+    </script>
+  </body>
+</html>
